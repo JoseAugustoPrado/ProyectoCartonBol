@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página del caso de uso "Gestionar pedidos de cliente"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización de los pedidos de clientes</h3>
+    
+        <div class="form-group">
+          <label for="numero-pedCliente">Número de pedido del cliente:</label>
+          <input type="text" name="numero_pedCliente" class="form-control registro-pedidoCliente">
+        </div>
+    
+        <div class="form-group">
+          <label for="fecha-pedCliente">Fecha de pedido del cliente:</label>
+          <input type="date" name="fecha_pedCliente" class="form-control registro-pedidoCliente">
+        </div>
+
+        <table class="table" id="tabla-producto-pedidoCliente">
+            <thead>
+              <tr>
+                <th class="titulo-tabla">Código del producto</th>
+                <th class="titulo-tabla">Cantidad del producto</th>
+                <th class="titulo-tabla">Unidad de medida del producto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="form-control registro-pedidoCliente" name="PC_codigo_producto[]"></td>
+                <td><input type="number" class="form-control registro-pedidoCliente" name="cantidadProducto_PC[]"></td>
+                <td><input type="text" class="form-control registro-pedidoCliente" name="unidadMedidaProd_PC[]"></td>            
+              </tr>
+            </tbody>
+        </table>
+
+        <div class="btn-container">
+            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-producto-pedidoCliente', ['PC_codigo_producto', 'cantidadProducto_PC', 'unidadMedidaProd_PC'], ['registro-pedidoCliente', 'registro-pedidoCliente', 'registro-pedidoCliente'], ['text', 'number', 'text'])">Agregar fila</button>
+            <button type="button" class="btn btn-eliminar-fila" style="display: inline-block; margin-left: 40px;" onclick="eliminarFila('tabla-producto-pedidoCliente')">Eliminar fila</button>
+        </div>
+
+        <div class="form-group">
+            <label for="PC-nombre-cliente">Nombre del cliente:</label>
+            <input type="text" name="PC_nombre_cliente" class="form-control registro-pedidoCliente">
+          </div>
+
+        <div class="form-group">
+          <label for="direccion-pedCliente">Dirección de entrega del pedido de cliente:</label>
+          <input type="text" name="direccion_pedCliente" class="form-control registro-pedidoCliente">
+        </div>
+
+        <div class="form-group">
+            <label for="PC-numero-factura">Número de la factura del cliente:</label>
+            <input type="text" name="PC_numero_factura" class="form-control registro-pedidoCliente">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-pedidoCliente" style="display: inline-block;">Registrar pedido de cliente</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-pedidoCliente" style="display: inline-block; margin-left: 40px;">Actualizar pedido de cliente</button>
+        
+        <h3 class="titulo-comun">Buscar pedido de cliente</h3>
+
+        <div class="form-group">
+          <label for="buscar-pedidoCliente">Por favor, introduzca el número del pedido de cliente que desea buscar:</label>
+          <input type="text" name="buscar_pedidoCliente" class="form-control buscar-pedidoCliente">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-pedidoCliente">Buscar pedido de cliente</button>     
+          
+        <h3 class="titulo-comun">Eliminar pedido de cliente</h3>
+
+        <div class="form-group">
+          <label for="eliminar-pedidoCliente">Introduzca el número del pedido del pedido de cliente que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_pedidoCliente" class="form-control eliminar-pedidoCliente">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-pedidoCliente">Eliminar pedido de cliente</button>              
+      
+      </form>
+    </div>
+  </div>
+  <script src="js/funcionesComunes.js"></script>
+</body>

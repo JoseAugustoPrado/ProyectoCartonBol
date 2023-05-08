@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página del caso de uso "Gestionar catálogo de proveedores"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización de los catálogos de proveedores</h3>
+    
+        <div class="form-group">
+          <label for="ID-catalogo">ID del catálogo:</label>
+          <input type="text" name="ID_catalogo" class="form-control registro-catalogo">
+        </div>
+    
+        <table class="table" id="tabla-materiaPrima-catalogo">
+            <thead>
+                <tr>
+                    <th class="titulo-tabla">Código de la materia prima</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="fila-0">
+                    <td><input type="text" class="form-control registro-planProduccion" name="CP_codigo_materiaPrima[]"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-container">
+            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-materiaPrima-catalogo', ['CP_codigo_materiaPrima'], ['registro-catalogo'], ['text'])">Agregar fila</button>
+            <button type="button" class="btn btn-eliminar-fila" style="display: inline-block; margin-left: 40px;" onclick="eliminarFila('tabla-materiaPrima-catalogo')">Eliminar fila</button>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-cargo" style="display: inline-block;">Registrar catálogo</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-cargo" style="display: inline-block; margin-left: 40px;">Actualizar catálogo</button>
+        
+        <h3 class="titulo-comun">Buscar catálogo del proveedor</h3>
+
+        <div class="form-group">
+          <label for="buscar-catalogo">Por favor, introduzca el ID del catálogo que desea buscar:</label>
+          <input type="text" name="buscar_catalogo" class="form-control buscar-catalogo">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-catalogo">Buscar catálogo</button>     
+          
+        <h3 class="titulo-comun">Eliminar catálogo del proveedor</h3>
+
+        <div class="form-group">
+          <label for="eliminar-catalogo">Introduzca el ID del catálogo que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_catalogo" class="form-control eliminar-catalogo">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-catalogo">Eliminar catálogo</button>              
+      
+      </form>
+    </div>
+  </div>
+  <script src="js/funcionesComunes.js"></script>
+</body>

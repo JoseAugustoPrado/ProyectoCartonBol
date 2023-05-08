@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página del caso de uso "Gestionar mantenimientos"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización de los mantenimientos realizados en las máquinas</h3>
+    
+        <div class="form-group">
+          <label for="codigo-mantenimiento">Código del mantenimiento:</label>
+          <input type="text" name="codigo_mantenimiento" class="form-control registro-mantenimiento">
+        </div>
+    
+        <div class="form-group">
+          <label for="fecha-mantenimiento">Fecha del mantenimiento:</label>
+          <input type="date" name="fecha_mantenimiento" class="form-control registro-mantenimiento">
+        </div>
+
+        <div class="form-group">
+            <label for="M-codigo-tecnico">Código del técnico de mantenimiento:</label>
+            <input type="text" name="M_codigo_tecnico" class="form-control registro-mantenimiento">
+        </div>
+
+        <div class="form-group">
+            <label for="M-codigo-maquina">Código de la máquina:</label>
+            <input type="text" name="M_codigo_maquina" class="form-control registro-mantenimiento">
+        </div>
+
+        <div class="form-group">
+            <label for="descrip-mantenimiento">Descripción del mantenimiento:</label>
+            <textarea name="descrip_mantenimiento" class="form-control registro-mantenimiento" rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-mantenimiento" style="display: inline-block;">Registrar mantenimiento</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-mantenimiento" style="display: inline-block; margin-left: 40px;">Actualizar mantenimiento</button>
+        
+        <h3 class="titulo-comun">Buscar mantenimiento realizado</h3>
+
+        <div class="form-group">
+          <label for="buscar-mantenimiento">Por favor, introduzca el código del mantenimiento realizado que desea buscar:</label>
+          <input type="text" name="buscar_mantenimiento" class="form-control buscar-mantenimiento">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-mantenimiento">Buscar mantenimiento</button>     
+          
+        <h3 class="titulo-comun">Eliminar mantenimiento realizado</h3>
+
+        <div class="form-group">
+          <label for="eliminar-mantenimiento">Introduzca el código del mantenimiento que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_mantenimiento" class="form-control eliminar-mantenimiento">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-mantenimiento">Eliminar mantenimiento</button>              
+      
+      </form>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página del caso de uso "Gestionar notas de entrega"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización de las notas de entrega</h3>
+    
+        <div class="form-group">
+          <label for="numero-notaEntrega">Número de la nota de entrega:</label>
+          <input type="text" name="numero_notaEntrega" class="form-control registro-notaEntrega">
+        </div>
+    
+        <div class="form-group">
+          <label for="fecha-notaEntrega">Fecha de la nota de entrega:</label>
+          <input type="date" name="fecha_notaEntrega" class="form-control registro-notaEntrega">
+        </div>
+
+        <div class="form-group">
+            <label for="NE-nombre-conductor">Nombre del conductor responsable:</label>
+            <input type="text" name="NE_nombre_conductor" class="form-control registro-notaEntrega">
+        </div>
+
+        <div class="form-group">
+            <label for="NE-numero-pedCliente">Número del pedido de cliente:</label>
+            <input type="text" name="NE_numero_pedCliente" class="form-control registro-notaEntrega">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-notaEntrega" style="display: inline-block;">Registrar nota de entrega</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-notaEntrega" style="display: inline-block; margin-left: 40px;">Actualizar nota de entrega</button>
+        
+        <h3 class="titulo-comun">Buscar nota de entrega</h3>
+
+        <div class="form-group">
+          <label for="buscar-notaEntrega">Por favor, introduzca el número de la nota de entrega que desea buscar:</label>
+          <input type="text" name="buscar_notaEntrega" class="form-control buscar-notaEntrega">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-notaEntrega">Buscar nota de entrega</button>     
+          
+        <h3 class="titulo-comun">Eliminar nota de entrega</h3>
+
+        <div class="form-group">
+          <label for="eliminar-notaEntrega">Introduzca el número de la nota de entrega que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_notaEntrega" class="form-control eliminar-notaEntrega">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-notaEntrega">Eliminar nota de entrega</button>              
+      
+      </form>
+    </div>
+  </div>
+  <script src="js/funcionesComunes.js"></script>
+</body>

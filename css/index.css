@@ -1,0 +1,76 @@
+.titulo-comun {
+    margin-bottom: 20px;
+    text-align: left
+}
+
+.btn-primary {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color:#fff;
+    background-color:#146E14;
+    border-color:#000000;
+}
+
+.btn-primary:hover {
+  background-color: #E14514;
+  border-color:#000000
+}
+
+.btn-primary:active {
+  background-color: #E14514 !important;
+  border-color:#000000
+}
+
+.titulo-tabla {
+    font-weight: normal;
+}
+  
+.btn-container {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+  
+.btn-agregar-fila {
+  background-color:darkslateblue;
+  border-color: #000000;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+.btn-eliminar-fila {
+  background-color:darkslateblue;
+  border-color: #000000;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+.btn-agregar-fila:hover{
+  background-color:#950A0A;
+  color: #fff;
+  border-color: #000000;
+}
+
+.btn-eliminar-fila:hover{
+  background-color:#950A0A;
+  color: #fff;
+  border-color: #000000;
+}
+  
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

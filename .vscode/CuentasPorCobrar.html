@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página del caso de uso "Gestionar cuentas por cobrar"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización de las cuentas por cobrar</h3>
+    
+        <div class="form-group">
+          <label for="numero-cuentaPorCobrar">Número de la cuenta por cobrar:</label>
+          <input type="text" name="numero_cuentaPorCobrar" class="form-control registro-cuentaPorCobrar">
+        </div>
+    
+        <div class="form-group">
+          <label for="fechaVencimiento-CxC">Fecha de vencimiento de la cuenta por cobrar:</label>
+          <input type="date" name="fechaVencimiento_CxC" class="form-control registro-cuentaPorCobrar">
+        </div>
+
+        <div class="form-group">
+          <label for="estadoCuenta-CxC">Estado de la cuenta:</label>
+          <input type="text" name="estadoCuenta_CxC" class="form-control registro-cuentaPorCobrar">
+        </div>
+
+        <div class="form-group">
+          <label for="CxC-numeroFacturaCliente">Número de la factura del cliente:</label>
+          <input type="text" name="CxC_numeroFacturaCliente" class="form-control registro-cuentaPorCobrar">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-cuentaPorCobrar" style="display: inline-block;">Registrar cuenta por cobrar</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-cuentaPorCobrar" style="display: inline-block; margin-left: 40px;">Actualizar cuenta por cobrar</button>
+        
+        <h3 class="titulo-comun">Buscar cuenta por cobrar</h3>
+
+        <div class="form-group">
+          <label for="buscar-cuentaPorCobrar">Por favor, introduzca el número de la cuenta por cobrar que desea buscar:</label>
+          <input type="text" name="buscar_cuentaPorCobrar" class="form-control buscar-cuentaPorCobrar">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-cuentaPorCobrar">Buscar cuenta por cobrar</button>     
+          
+        <h3 class="titulo-comun">Eliminar cuenta por cobrar</h3>
+
+        <div class="form-group">
+          <label for="eliminar-cuentaPorCobrar">Introduzca el número de la cuenta por cobrar que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_cuentaPorCobrar" class="form-control eliminar-cuentaPorCobrar">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-cuentaPorCobrar">Eliminar cuenta por cobrar</button>              
+      
+      </form>
+    </div>
+  </div>
+</body>

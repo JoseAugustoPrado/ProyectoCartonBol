@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página del caso de uso "Gestionar procesos de fabricación"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización del proceso de fabricación</h3>
+    
+        <div class="form-group">
+          <label for="ID-procesoFabricacion">ID del proceso de fabricación:</label>
+          <input type="text" name="ID_procesoFabricacion" class="form-control registro-procesoFabricacion">
+        </div>
+    
+        <div class="form-group">
+          <label for="horario-inicioProceso">Fecha y hora de inicio del proceso de fabricación (YYYY-MM-DDTHH:mm:ss):</label>
+          <input type="datetime" name="horario_inicioProceso" class="form-control registro-procesoFabricacion">
+        </div>
+
+        <div class="form-group">
+            <label for="horario-terminoProceso">Fecha y hora de término del proceso de fabricación (YYYY-MM-DDTHH:mm:ss):</label>
+            <input type="datetime" name="horario_terminoProceso" class="form-control registro-procesoFabricacion">
+        </div>
+
+        <div class="form-group">
+          <label for="minutos-TotalesProceso">Tiempo total del proceso (en minutos):</label>
+          <input type="number" name="minutosTotalesProceso" class="form-control registro-procesoFabricacion">
+        </div>
+
+        <div class="form-group">
+          <label for="PF-codigoTipoProceso">Código del tipo de proceso:</label>
+          <input type="text" name="PF_codigoTipoProceso" class="form-control registro-procesoFabricacion">
+        </div>
+
+        <div class="form-group">
+            <label for="PF-codigo-maquina">Código de la máquina utilizada en el proceso:</label>
+            <input type="text" name="PF_codigo_maquina" class="form-control registro-procesoFabricacion">
+        </div>
+
+        <div class="form-group">
+            <label for="PF-codigo-empleado">Código del empleado responsable por el proceso:</label>
+            <input type="text" name="PF_codigo_empleado" class="form-control registro-procesoFabricacion">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-procesoFabricacion" style="display: inline-block;">Registrar proceso de fabricación</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-procesoFabricacion" style="display: inline-block; margin-left: 40px;">Actualizar proceso de fabricación</button>
+
+        <h3 class="titulo-comun">Buscar proceso de fabricación</h3>
+
+        <div class="form-group">
+          <label for="buscar-procesoFabricación">Por favor, introduzca el ID del proceso de fabricación que desea buscar:</label>
+          <input type="text" name="buscar_procesoFabricacion" class="form-control buscar-procesoFabricación">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-procesoFabricacion">Buscar proceso de fabricación</button>
+
+        <h3 class="titulo-comun">Eliminar proceso de fabricación</h3>
+
+        <div class="form-group">
+          <label for="eliminar-procesoFabricacion">Introduzca el ID del proceso de fabricación que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_procesoFabricacion" class="form-control eliminar-procesoFabricacion">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-procesoFabricacion">Eliminar proceso de fabricación</button>              
+      
+      </form>
+    </div>
+  </div>
+</body>

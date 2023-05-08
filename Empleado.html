@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página del caso de uso "Gestionar empleados"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización de los empleados de la empresa</h3>
+    
+        <div class="form-group">
+          <label for="codigo-empleado">Código del empleado:</label>
+          <input type="text" name="codigo_empleado" class="form-control registro-empleado">
+        </div>
+    
+        <div class="form-group">
+          <label for="nombre-empleado">Nombre del empleado:</label>
+          <input type="text" name="nombre_empleado" class="form-control registro-empleado">
+        </div>
+
+        <div class="form-group">
+            <label for="CI-empleado">CI del empleado:</label>
+            <input type="text" name="CI_empleado" class="form-control registro-empleado">
+        </div>
+
+        <div class="form-group">
+            <label for="direccion-empleado">Dirección del empleado:</label>
+            <input type="text" name="direccion_empleado" class="form-control registro-empleado">
+        </div>
+
+        <div class="form-group">
+            <label for="telefono-empleado">Teléfono del empleado:</label>
+            <input type="text" name="telefono_empleado" class="form-control registro-empleado">
+        </div>
+
+        <div class="form-group">
+            <label for="E-codigo-cargo">Código del cargo asignado:</label>
+            <input type="text" name="E_codigo_cargo" class="form-control registro-empleado">
+        </div>
+
+        <div class="form-group">
+            <label for="E-ID-sueldo">ID de sueldo del empleado:</label>
+            <input type="text" name="E_ID_sueldo" class="form-control registro-empleado">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-empleado" style="display: inline-block;">Registrar empleado</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-empleado" style="display: inline-block; margin-left: 40px;">Actualizar empleado</button>
+        
+        <h3 class="titulo-comun">Buscar empleado de la empresa</h3>
+
+        <div class="form-group">
+          <label for="buscar-empleado">Por favor, introduzca el código del empleado que desea buscar:</label>
+          <input type="text" name="buscar_empleado" class="form-control buscar-empleado">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-empleado">Buscar empleado</button>     
+          
+        <h3 class="titulo-comun">Eliminar empleado de la empresa</h3>
+
+        <div class="form-group">
+          <label for="eliminar-empleado">Introduzca el código del empleado que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_empleado" class="form-control eliminar-empleado">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-empleado">Eliminar empleado</button>              
+      
+      </form>
+    </div>
+  </div>
+</body>

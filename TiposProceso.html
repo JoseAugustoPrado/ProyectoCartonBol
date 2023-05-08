@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página del caso de uso "Gestionar tipos de proceso"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización del tipo de proceso</h3>
+    
+        <div class="form-group">
+          <label for="codigo-tipoProceso">Código del tipo de proceso:</label>
+          <input type="text" name="codigo_tipoProceso" class="form-control registro-tipoProceso">
+        </div>
+    
+        <div class="form-group">
+          <label for="nombre-tipoProceso">Nombre del tipo de proceso:</label>
+          <input type="text" name="nombre_tipoProceso" class="form-control registro-tipoProceso">
+        </div>
+
+        <div class="form-group">
+            <label for="descrip-tipoProceso">Descripción del tipo de proceso:</label>
+            <textarea name="descrip_tipoProceso" class="form-control registro-tipoProceso" rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-tipoProceso" style="display: inline-block;">Registrar tipo de proceso</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-tipoProceso" style="display: inline-block; margin-left: 40px;">Actualizar tipo de proceso</button>
+        
+        <h3 class="titulo-comun">Buscar tipo de proceso</h3>
+
+        <div class="form-group">
+          <label for="buscar-tipoProceso">Por favor, introduzca el código del tipo de proceso que desea buscar:</label>
+          <input type="text" name="buscar_tipoProceso" class="form-control buscar-tipoProceso">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-tipoProceso">Buscar tipo de proceso</button>     
+          
+        <h3 class="titulo-comun">Eliminar tipo de proceso</h3>
+
+        <div class="form-group">
+          <label for="eliminar-tipoProceso">Introduzca el código del tipo de proceso que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_tipoProceso" class="form-control eliminar-tipoProceso">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-tipoProceso">Eliminar tipo de proceso</button>              
+      
+      </form>
+    </div>
+  </div>
+</body>
