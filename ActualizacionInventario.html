@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página del caso de uso "Actualizar inventarios"</title>
+    <title>Cartonbol - Actualizar inventarios</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
     <!-- Agrega cualquier otra hoja de estilos que necesites -->
   </head>
   <body>
@@ -34,8 +35,19 @@
         </div>
 
         <div class="form-group">
-          <label for="AI-ID-inventario">ID del inventario:</label>
-          <input type="text" name="AI_ID_inventario" class="form-control registro-actualizacionInventario">
+          <label for="AI-ID-espacioInventario">ID del espacio de inventario:</label>
+          <input type="text" name="AI_ID_espacioInventario" class="form-control registro-actualizacionInventario">
+        </div>
+
+        <div class="form-group">
+          <label for="tipo-transaccion">Tipo de transacción:</label>
+          <select name="tipo_transaccion" id="tipo-transaccion" class="form-control registro-actualizacionInventario" onchange="mostrarOpcionesTransaccion()">
+            <option value="">-</option>
+            <option value="transaccion-ingresoProducto">Ingreso de productos</option>
+            <option value="transaccion-salidaProducto">Salida de productos</option>
+            <option value="transaccion-ingresoMateriaPrima">Ingreso de materia prima</option>
+            <option value="transaccion-salidaMateriaPrima">Salida de materia prima</option>
+          </select>
         </div>
     
         <table class="table" id="tabla-material-actualizacionInventario">
@@ -45,27 +57,30 @@
                 <th class="titulo-tabla">Cantidad</th>
                 <th class="titulo-tabla">Unidad de medida</th>
                 <th class="titulo-tabla">Fecha de actualización</th>
-                <th class="titulo-tabla">Transacción</th>
               </tr>
             </thead>
             <tbody>
               <tr id="fila-0">
                 <td><input type="text" class="form-control registro-actualizacionInventario" name="AI_codigo_material[]"></td>
-                <td><input type="number" class="form-control registro-actualizacionInventario" name="cant_material_AI[]"></td>
+                <td><input type="number" step=".01" class="form-control registro-actualizacionInventario" name="cantidad_material_AI[]"></td>
                 <td><input type="text" class="form-control registro-actualizacionInventario" name="unidadMedidaMaterial_AI[]"></td>
-                <td><input type="datetime" class="form-control registro-actualizacionInventario" placeholder="(AAAA-MM-DD HH:mm)" name=fechaActualizacion_Inventario[]"></td>       
-                <td><input type="text" class="form-control registro-actualizacionInventario" name="tipoTransaccion[]"></td>       
+                <td><input type="datetime" class="form-control registro-actualizacionInventario" placeholder="(AAAA-MM-DD HH:mm)" name=fechaActualizacion_Inventario[]"></td>     
               </tr>
             </tbody>
           </table>
   
           <div class="btn-container">
-            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-material-actualizacionInventario', ['AI_codigo_material', 'cant_material_AI', 'unidadMedidaMaterial_AI', 'fechaActualizacion_Inventario', 'tipoTransaccion'], ['registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario'], ['text', 'number', 'text', 'datetime', 'text'])">Agregar fila</button>
+            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-material-actualizacionInventario', ['AI_codigo_material', 'cantidad_material_AI', 'unidadMedidaMaterial_AI', 'fechaActualizacion_Inventario'], ['registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario'], ['text', 'number', 'text', 'datetime'])">Agregar fila</button>
             <button type="button" class="btn btn-eliminar-fila" style="display: inline-block; margin-left: 40px;" onclick="eliminarFila('tabla-material-actualizacionInventario')">Eliminar fila</button>
           </div>
 
-        <button type="submit" class="btn btn-primary" id="btn-registrar-inventario" style="display: inline-block;">Registrar inventario</button>
-        <button type="submit" class="btn btn-primary" id="btn-actualizar-inventario" style="display: inline-block; margin-left: 40px;">Actualizar inventario</button>
+        <div class="form-group">
+          <label for="AI-documentoTransaccion">Código, ID o número del documento relacionado con la actualización:</label>
+          <input type="text" name="AI_documentoTransaccion" class="form-control registro-actualizacionInventario">
+        </div>  
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-actualizacionInventario" style="display: inline-block;">Registrar Transacción</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-actualizacionInventario" style="display: inline-block; margin-left: 40px;">Actualizar Transacción</button>
         
         <h3 class="titulo-comun">Buscar actualización de inventario</h3>
 

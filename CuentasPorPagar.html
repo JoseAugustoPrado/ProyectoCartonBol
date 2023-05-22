@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página del caso de uso "Gestionar cuentas por pagar"</title>
+    <title>Cartonbol - Gestionar cuentas por pagar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
     <!-- Agrega cualquier otra hoja de estilos que necesites -->
   </head>
   <body>
@@ -40,7 +41,11 @@
 
         <div class="form-group">
           <label for="estadoCuenta-CxP">Estado de la cuenta:</label>
-          <input type="text" name="estadoCuenta_CxP" class="form-control registro-cuentaPorPagar">
+          <select name="estadoCuenta_CxP" id="estadoCuenta-CxP" class="form-control registro-cuentaPorPagar" onchange="mostrarOpcionesCuentaXPagar()">
+            <option value="">-</option>
+            <option value="cuentaXPagar-pagado">Liquidada</option>
+            <option value="cuentaXPagar-noPagado">Pendiente</option>
+          </select>
         </div>
 
         <div class="form-group">

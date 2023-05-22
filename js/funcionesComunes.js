@@ -4,8 +4,12 @@ function agregarFila(idTabla, nombresInputs, nombreFormulario, tiposInputs) {
   var rowCount = table.rows.length - 1;
   row.setAttribute('id', 'fila-' + rowCount);
   for (var i = 0; i < nombresInputs.length; i++) {
-  var cell = row.insertCell(i);
-  cell.innerHTML = '<input type="' + tiposInputs[i] + '" class="form-control ' + nombreFormulario[i] + '" name="' + nombresInputs[i] + '[]">';
+    var cell = row.insertCell(i);
+    if (tiposInputs[i] === 'number') {
+      cell.innerHTML = '<input type="' + tiposInputs[i] + '" step=".01" class="form-control ' + nombreFormulario[i] + '" name="' + nombresInputs[i] + '[]">';
+    } else {
+      cell.innerHTML = '<input type="' + tiposInputs[i] + '" class="form-control ' + nombreFormulario[i] + '" name="' + nombresInputs[i] + '[]">';
+    }
   }
 }
 

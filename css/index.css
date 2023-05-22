@@ -3,6 +3,12 @@
     text-align: left
 }
 
+body {
+  background-image: url('../images/Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .btn-primary {
     margin-top: 10px;
     margin-bottom: 30px;

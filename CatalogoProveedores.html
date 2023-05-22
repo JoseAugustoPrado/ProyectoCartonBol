@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página del caso de uso "Gestionar catálogo de proveedores"</title>
+    <title>Cartonbol - Gestionar catálogo de proveedores</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
     <!-- Agrega cualquier otra hoja de estilos que necesites -->
   </head>
   <body>
@@ -37,21 +38,25 @@
             <thead>
                 <tr>
                     <th class="titulo-tabla">Código de la materia prima</th>
+                    <th class="titulo-tabla">Precio</th>
+                    <th class="titulo-tabla">Unidad de medida</th>
                 </tr>
             </thead>
             <tbody>
                 <tr id="fila-0">
-                    <td><input type="text" class="form-control registro-planProduccion" name="CP_codigo_materiaPrima[]"></td>
+                    <td><input type="text" class="form-control registro-catalogo" name="CP_codigo_materiaPrima[]"></td>
+                    <td><input type="number" step=".01" class="form-control registro-catalogo" name="precio_materiaPrima[]"></td>
+                    <td><input type="text" class="form-control registro-catalogo" name="unidadMedida_materiaPrima_CP[]"></td>
                 </tr>
             </tbody>
         </table>
         <div class="btn-container">
-            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-materiaPrima-catalogo', ['CP_codigo_materiaPrima'], ['registro-catalogo'], ['text'])">Agregar fila</button>
+            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-materiaPrima-catalogo', ['CP_codigo_materiaPrima', 'precio_materiaPrima', 'unidadMedida_materiaPrima_CP'], ['registro-catalogo', 'registro-catalogo', 'registro-catalogo'], ['text', 'number', 'text'])">Agregar fila</button>
             <button type="button" class="btn btn-eliminar-fila" style="display: inline-block; margin-left: 40px;" onclick="eliminarFila('tabla-materiaPrima-catalogo')">Eliminar fila</button>
         </div>
 
-        <button type="submit" class="btn btn-primary" id="btn-registrar-cargo" style="display: inline-block;">Registrar catálogo</button>
-        <button type="submit" class="btn btn-primary" id="btn-actualizar-cargo" style="display: inline-block; margin-left: 40px;">Actualizar catálogo</button>
+        <button type="submit" class="btn btn-primary" id="btn-registrar-catalogo" style="display: inline-block;">Registrar catálogo</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-catalogo" style="display: inline-block; margin-left: 40px;">Actualizar catálogo</button>
         
         <h3 class="titulo-comun">Buscar catálogo del proveedor</h3>
 
