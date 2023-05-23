@@ -14,17 +14,17 @@ body {
     margin-bottom: 30px;
     font-size: 16px;
     color:#fff;
-    background-color:#146E14;
+    background-color:#008000;
     border-color:#000000;
 }
 
 .btn-primary:hover {
-  background-color: #E14514;
+  background-color:	#b30000;
   border-color:#000000
 }
 
 .btn-primary:active {
-  background-color: #E14514 !important;
+  background-color: #b30000 !important;
   border-color:#000000
 }
 
@@ -39,7 +39,7 @@ body {
 }
   
 .btn-agregar-fila {
-  background-color:darkslateblue;
+  background-color:#00802b;
   border-color: #000000;
   color: #fff;
   font-size: 14px;
@@ -47,7 +47,7 @@ body {
 }
 
 .btn-eliminar-fila {
-  background-color:darkslateblue;
+  background-color:#00802b;
   border-color: #000000;
   color: #fff;
   font-size: 14px;
@@ -55,13 +55,13 @@ body {
 }
 
 .btn-agregar-fila:hover{
-  background-color:#950A0A;
+  background-color:#b30000;
   color: #fff;
   border-color: #000000;
 }
 
 .btn-eliminar-fila:hover{
-  background-color:#950A0A;
+  background-color:#b30000;
   color: #fff;
   border-color: #000000;
 }
