@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página del caso de uso "Gestionar reporte de datos"</title>
+    <title>Cartonbol - Obtener Informe de Datos"</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
     <!-- Agrega cualquier otra hoja de estilos que necesites -->
   </head>
   <body>
@@ -29,16 +30,17 @@
         <h3 class="titulo-comun">Generar un reporte de datos</h3>
     
         <div class="form-group">
-          <label for="fecha-reporteDatos">Fecha/hora del reporte:</label>
-          <input type="datetime" name="fecha_reporteDatos" class="form-control registro-reporteDatos">
+          <label for="fecha-informeDatos">Fecha/hora del reporte:</label>
+          <input type="datetime" name="fecha_informeDatos" placeholder="(AAAA-MM-DD HH:mm)" class="form-control obtener-informeDatos">
         </div>
     
         <div class="form-group">
-            <label for="tipo-reporteDatos">Tipo de reporte:</label>
-            <select name="tipo_reporteDatos" id="tipo-reporteDatos" class="form-control registro-reporteDatos" onchange="mostrarOpcionesReporte()">
-              <option value="">-- Seleccione un tipo de reporte --</option>
-              <option value="reporte-inventario">Reporte de inventario</option>
-              <option value="reporte-pedidos">Reporte de pedidos de clientes</option>
+            <label for="tipo-informeDatos">Tipo de informe:</label>
+            <select name="tipo_informeDatos" id="tipo-informeDatos" class="form-control obtener-informeDatos" onchange="mostrarOpcionesInforme()">
+              <option value="">-</option>
+              <option value="informe-inventario">Informe de inventario</option>
+              <option value="informe-pedidos">Informe de pedidos de clientes</option>
+              <option value="informe-pedidosInventario">Informe de pedidos de clientes e Inventario</option>
             </select>
         </div>
   
@@ -48,6 +50,10 @@
   
           <div id="opciones-pedidos" style="display: none;">
             <!-- Aquí van las opciones específicas para el reporte de pedidos de clientes -->
+          </div>
+
+          <div id="opciones-pedidosInventario" style="display: none;">
+            <!-- Aquí van las opciones específicas para el reporte de inventario -->
           </div>
   
         </form>

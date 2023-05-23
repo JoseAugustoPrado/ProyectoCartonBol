@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página del caso de uso "Gestionar pedidos de cliente"</title>
+    <title>Cartonbol - Gestionar pedidos de clientes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
     <!-- Agrega cualquier otra hoja de estilos que necesites -->
   </head>
   <body>
@@ -35,7 +36,7 @@
     
         <div class="form-group">
           <label for="fecha-pedCliente">Fecha de pedido del cliente:</label>
-          <input type="date" name="fecha_pedCliente" class="form-control registro-pedidoCliente">
+          <input type="datetime" name="fecha_pedCliente" placeholder="(AAAA-MM-DD HH:mm)" class="form-control registro-pedidoCliente">
         </div>
 
         <table class="table" id="tabla-producto-pedidoCliente">
@@ -49,7 +50,7 @@
             <tbody>
               <tr>
                 <td><input type="text" class="form-control registro-pedidoCliente" name="PC_codigo_producto[]"></td>
-                <td><input type="number" class="form-control registro-pedidoCliente" name="cantidadProducto_PC[]"></td>
+                <td><input type="number" step=".01" class="form-control registro-pedidoCliente" name="cantidadProducto_PC[]"></td>
                 <td><input type="text" class="form-control registro-pedidoCliente" name="unidadMedidaProd_PC[]"></td>            
               </tr>
             </tbody>
@@ -61,8 +62,8 @@
         </div>
 
         <div class="form-group">
-            <label for="PC-nombre-cliente">Nombre del cliente:</label>
-            <input type="text" name="PC_nombre_cliente" class="form-control registro-pedidoCliente">
+            <label for="PC-NIT-cliente">NIT del cliente:</label>
+            <input type="text" name="PC_NIT_cliente" class="form-control registro-pedidoCliente">
           </div>
 
         <div class="form-group">
@@ -71,8 +72,8 @@
         </div>
 
         <div class="form-group">
-            <label for="PC-numero-factura">Número de la factura del cliente:</label>
-            <input type="text" name="PC_numero_factura" class="form-control registro-pedidoCliente">
+            <label for="PC-numero-facturaCliente">Número de la factura del cliente:</label>
+            <input type="text" name="PC_numero_facturaCliente" class="form-control registro-pedidoCliente">
         </div>
 
         <button type="submit" class="btn btn-primary" id="btn-registrar-pedidoCliente" style="display: inline-block;">Registrar pedido de cliente</button>
@@ -90,7 +91,7 @@
         <h3 class="titulo-comun">Eliminar pedido de cliente</h3>
 
         <div class="form-group">
-          <label for="eliminar-pedidoCliente">Introduzca el número del pedido del pedido de cliente que desea eliminar del sistema:</label>
+          <label for="eliminar-pedidoCliente">Introduzca el número del pedido de cliente que desea eliminar del sistema:</label>
           <input type="text" name="eliminar_pedidoCliente" class="form-control eliminar-pedidoCliente">
         </div>
         
