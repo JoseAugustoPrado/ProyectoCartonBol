@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página del caso de uso "Gestionar procesos de fabricación"</title>
+    <title>Cartonbol - Gestionar procesos de fabricación</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
     <!-- Agrega cualquier otra hoja de estilos que necesites -->
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+      <a class="navbar-brand" href="./MenuPrincipal.html">
+        <img src="images/Icono.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        CartonBol
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,23 +38,23 @@
         </div>
     
         <div class="form-group">
-          <label for="horario-inicioProceso">Fecha y hora de inicio del proceso de fabricación (YYYY-MM-DDTHH:mm:ss):</label>
-          <input type="datetime" name="horario_inicioProceso" class="form-control registro-procesoFabricacion">
+          <label for="horario-inicioProceso">Fecha y hora de inicio del proceso de fabricación:</label>
+          <input type="datetime-local" name="horario_inicioProceso" class="form-control registro-procesoFabricacion">
         </div>
 
         <div class="form-group">
-            <label for="horario-terminoProceso">Fecha y hora de término del proceso de fabricación (YYYY-MM-DDTHH:mm:ss):</label>
-            <input type="datetime" name="horario_terminoProceso" class="form-control registro-procesoFabricacion">
+            <label for="horario-terminoProceso">Fecha y hora de término del proceso de fabricación:</label>
+            <input type="datetime-local" name="horario_terminoProceso" class="form-control registro-procesoFabricacion">
         </div>
 
         <div class="form-group">
-          <label for="minutos-TotalesProceso">Tiempo total del proceso (en minutos):</label>
-          <input type="number" name="minutosTotalesProceso" class="form-control registro-procesoFabricacion">
+          <label for="minutos-totalesProceso">Tiempo total del proceso (en minutos):</label>
+          <input type="number" name="minutos_totalesProceso" class="form-control registro-procesoFabricacion">
         </div>
 
         <div class="form-group">
-          <label for="PF-codigoTipoProceso">Código del tipo de proceso:</label>
-          <input type="text" name="PF_codigoTipoProceso" class="form-control registro-procesoFabricacion">
+          <label for="PF-codigoPasoProceso">Código del paso del proceso:</label>
+          <input type="text" name="PF_codigoPasoProceso" class="form-control registro-procesoFabricacion">
         </div>
 
         <div class="form-group">

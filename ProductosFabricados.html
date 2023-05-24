@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cartonbol - Gestionar productos fabricados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+      <a class="navbar-brand" href="./MenuPrincipal.html">
+        <img src="images/Icono.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        CartonBol
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización de los productos fabricados</h3>
+    
+        <div class="form-group">
+          <label for="ID-registroProductosFabricados">ID del registro de productos fabricados:</label>
+          <input type="text" name="ID_registroProductosFabricados" class="form-control registro-productosFabricados">
+        </div>
+    
+        <div class="form-group">
+          <label for="fecha-productosFabricados">Fecha en la cual se ha terminado la fabricación de los productos:</label>
+          <input type="date" name="fecha_productosFabricados" class="form-control registro-productosFabricados">
+        </div>
+
+        <table class="table" id="tabla-productos-productosFabricados">
+            <thead>
+              <tr>
+                <th class="titulo-tabla">Código del producto fabricado</th>
+                <th class="titulo-tabla">Cantidad del producto fabricado</th>
+                <th class="titulo-tabla">Unidad de medida del producto fabricado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="form-control registro-productosFabricados" name="CPF_codigo_producto[]"></td>
+                <td><input type="number" step=".01" class="form-control registro-productosFabricados" name="cant_productosFabricados_CPF[]"></td>
+                <td><input type="text" class="form-control registro-productosFabricados" name="unidadMedida_productosFabricados[]"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <div class="btn-container">
+            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-productos-productosFabricados', ['CPF_codigo_producto', 'cant_productosFabricados_CPF', 'unidadMedida_productosFabricados'], ['registro-productosFabricados', 'registro-productosFabricados', 'registro-productosFabricados'], ['text', 'number', 'text'])">Agregar fila</button>
+            <button type="button" class="btn btn-eliminar-fila" style="display: inline-block; margin-left: 40px;" onclick="eliminarFila('tabla-productos-productosFabricados')">Eliminar fila</button>
+        </div>
+
+        <div class="form-group">
+            <label for="CPF-ID-procesoFabricacion">ID del proceso de fabricación relacionado con los productos fabricados:</label>
+            <input type="text" name="CPF_ID_procesoFabricacion" class="form-control registro-productosFabricados">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-productosFabricados" style="display: inline-block;">Registrar productos fabricados</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-productosFabricados" style="display: inline-block; margin-left: 40px;">Actualizar productos fabricados</button>
+        
+        <h3 class="titulo-comun">Buscar registro de productos fabricados</h3>
+
+        <div class="form-group">
+          <label for="buscar-productosFabricados">Por favor, introduzca el ID del registro de productos fabricados que desea buscar:</label>
+          <input type="text" name="buscar_productosFabricados" class="form-control buscar-productosFabricados">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-productosFabricados">Buscar registro de productos fabricados</button>     
+          
+        <h3 class="titulo-comun">Eliminar registro de productos fabricados</h3>
+
+        <div class="form-group">
+          <label for="eliminar-productosFabricados">Introduzca el ID del registro de productos fabricados que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_productosFabricados" class="form-control eliminar-productosFabricados">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-productosFabricados">Eliminar registro de productos fabricados</button>              
+      
+      </form>
+    </div>
+  </div>
+  <script src="js/funcionesComunes.js"></script>
+</body>

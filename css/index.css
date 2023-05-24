@@ -18,6 +18,14 @@ body {
     border-color:#000000;
 }
 
+.nav-pills .nav-link .dropdown {
+  display: none;
+}
+
+.nav-pills .nav-link:hover .dropdown {
+  display: block;
+}
+
 .btn-primary:hover {
   background-color:	#b30000;
   border-color:#000000

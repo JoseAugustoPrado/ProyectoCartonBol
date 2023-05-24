@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cartonbol - Gestionar notas de devolución</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
+    <!-- Agrega cualquier otra hoja de estilos que necesites -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+      <a class="navbar-brand" href="./MenuPrincipal.html">
+        <img src="images/Icono.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        CartonBol
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="MenuPrincipal.html">Menú Principal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4"></div>
+    <div class="container">
+      <form>
+        <h3 class="titulo-comun">Registro o actualización de las notas de devolución</h3>
+    
+        <div class="form-group">
+          <label for="numero-notaDevolucion">Número de la nota de devolución:</label>
+          <input type="text" name="numero_notaDevolucion" class="form-control registro-notaDevolucion">
+        </div>
+
+        <div class="form-group">
+          <label for="fecha-notaDevolucion">Fecha de emisión de la nota de devolución:</label>
+          <input type="date" name="fecha_notaDevolucion" class="form-control registro-notaDevolucion">
+        </div>
+    
+        <div class="form-group">
+            <label for="descrip-notaDevolucion">Descripción de la nota de devolución:</label>
+            <textarea name="descrip_notaDevolucion" class="form-control registro-notaDevolucion" rows="5"></textarea>
+        </div>
+
+        <table class="table" id="tabla-materiaPrima-notaDevolucion">
+            <thead>
+              <tr>
+                <th class="titulo-tabla">Código de la materia prima defectuosa</th>
+                <th class="titulo-tabla">Cantidad de la materia prima defectuosa</th>
+                <th class="titulo-tabla">Unidad de medida de la materia prima</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="form-control registro-notaDevolucion" name="ND_codigo_materiaPrima[]"></td>
+                <td><input type="number" step=".01" class="form-control registro-notaDevolucion" name="cant_materiaPrima_ND[]"></td>
+                <td><input type="text" class="form-control registro-notaDevolucion" name="unidadMedida_MP_ND[]"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <div class="btn-container">
+            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-materiaPrima-notaDevolucion', ['ND_codigo_materiaPrima', 'cant_materiaPrima_ND', 'unidadMedida_MP_ND'], ['registro-notaDevolucion', 'registro-notaDevolucion', 'registro-notaDevolucion'], ['text', 'number', 'text'])">Agregar fila</button>
+            <button type="button" class="btn btn-eliminar-fila" style="display: inline-block; margin-left: 40px;" onclick="eliminarFila('tabla-materiaPrima-notaDevolucion')">Eliminar fila</button>
+        </div>
+
+        <div class="form-group">
+            <label for="ND-numero-notaRecepcion">Número de la nota de recepción relacionada con la nota de devolución:</label>
+            <input type="text" name="ND_numero_notaRecepcion" class="form-control registro-notaDevolucion">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-registrar-notaDevolucion" style="display: inline-block;">Registrar nota de devolución</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-notaDevolucion" style="display: inline-block; margin-left: 40px;">Actualizar nota de devolución</button>
+        
+        <h3 class="titulo-comun">Buscar nota de devolución</h3>
+
+        <div class="form-group">
+          <label for="buscar-notaDevolucion">Por favor, introduzca el número de la nota de devolución que desea buscar:</label>
+          <input type="text" name="buscar_notaDevolucion" class="form-control buscar-notaDevolucion">
+        </div>
+              
+        <button type="submit" class="btn btn-primary" id="btn-buscar-notaDevolucion">Buscar nota de devolución</button>     
+          
+        <h3 class="titulo-comun">Eliminar nota de devolución</h3>
+
+        <div class="form-group">
+          <label for="eliminar-notaDevolucion">Introduzca el número de la nota de devolución que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_notaDevolucion" class="form-control eliminar-notaDevolucion">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-notaDevolucion">Eliminar nota de devolución</button>
+      
+      </form>
+    </div>
+  </div>
+  <script src="js/funcionesComunes.js"></script>
+</body>

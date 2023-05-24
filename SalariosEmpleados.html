@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página del caso de uso "Gestionar sueldos"</title>
+    <title>Cartonbol - Gestionar salarios de empleados</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
     <!-- Agrega cualquier otra hoja de estilos que necesites -->
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+      <a class="navbar-brand" href="./MenuPrincipal.html">
+        <img src="images/Icono.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        CartonBol
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,43 +30,43 @@
     <div class="container my-4"></div>
     <div class="container">
       <form>
-        <h3 class="titulo-comun">Registro o actualización de los sueldos de empleados</h3>
+        <h3 class="titulo-comun">Registro o actualización de los salarios de los empleados</h3>
     
         <div class="form-group">
-          <label for="ID-sueldo">ID del sueldo:</label>
-          <input type="text" name="ID_sueldo" class="form-control registro-sueldo">
+          <label for="ID-salario">ID del salario:</label>
+          <input type="text" name="ID_salario" class="form-control registro-salario">
         </div>
     
         <div class="form-group">
-          <label for="sueldo-base">Sueldo base del empleado (en bolivianos):</label>
-          <input type="number" step=".01" name="sueldo_base" class="form-control registro-sueldo">
+          <label for="salario-base">Salario base del empleado (en bolivianos):</label>
+          <input type="number" step=".01" name="salario_base" class="form-control registro-salario">
         </div>
 
         <div class="form-group">
             <label for="bonificaciones-extras">Bonificaciones extras (en bolivianos):</label>
-            <input type="number" step=".01" name="bonificaciones" class="form-control registro-sueldo">
+            <input type="number" step=".01" name="bonificaciones_extras" class="form-control registro-salario">
         </div>
 
-        <button type="submit" class="btn btn-primary" id="btn-registrar-sueldo" style="display: inline-block;">Registrar sueldo</button>
-        <button type="submit" class="btn btn-primary" id="btn-actualizar-suelod" style="display: inline-block; margin-left: 40px;">Actualizar sueldo</button>
+        <button type="submit" class="btn btn-primary" id="btn-registrar-salario" style="display: inline-block;">Registrar salario</button>
+        <button type="submit" class="btn btn-primary" id="btn-actualizar-salario" style="display: inline-block; margin-left: 40px;">Actualizar salario</button>
         
-        <h3 class="titulo-comun">Buscar informaciones de sueldo</h3>
+        <h3 class="titulo-comun">Buscar informaciones de salario</h3>
 
         <div class="form-group">
-          <label for="buscar-sueldo">Por favor, introduzca el ID del sueldo que desea buscar:</label>
-          <input type="text" name="buscar_sueldo" class="form-control buscar-sueldo">
+          <label for="buscar-salario">Por favor, introduzca el ID del salario que desea buscar:</label>
+          <input type="text" name="buscar_salario" class="form-control buscar-salario">
         </div>
               
-        <button type="submit" class="btn btn-primary" id="btn-buscar-sueldo">Buscar sueldo</button>     
+        <button type="submit" class="btn btn-primary" id="btn-buscar-salario">Buscar salario</button>     
           
-        <h3 class="titulo-comun">Eliminar sueldo de funcionario</h3>
+        <h3 class="titulo-comun">Eliminar salario de funcionario</h3>
 
         <div class="form-group">
-          <label for="eliminar-sueldo">Introduzca el ID del sueldo que desea eliminar del sistema:</label>
-          <input type="text" name="eliminar_sueldo" class="form-control eliminar-sueldo">
+          <label for="eliminar-salario">Introduzca el ID del salario que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_salario" class="form-control eliminar-salario">
         </div>
         
-        <button type="submit" class="btn btn-primary" id="btn-eliminar-sueldo">Eliminar sueldo</button>              
+        <button type="submit" class="btn btn-primary" id="btn-eliminar-salario">Eliminar salario</button>              
       
       </form>
     </div>

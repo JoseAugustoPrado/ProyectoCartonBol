@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página del caso de uso "Gestionar Planes de Producción"</title>
+    <title>Cartonbol - Gestionar Planes de Producción</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Index.css" type="text/css">
+    <link rel="icon" href="images/Icono.png" type="image/png">
     <!-- Agrega cualquier otra hoja de estilos que necesites -->
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="MenuPrincipal.html">CartonBol</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+      <a class="navbar-brand" href="./MenuPrincipal.html">
+        <img src="images/Icono.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        CartonBol
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,6 +30,9 @@
     <div class="container my-4"></div>
     <div class="container">
       <form>
+
+        <br>
+
         <h3 class="titulo-comun">Registro o actualización del plan de producción</h3>
     
         <div class="form-group">
@@ -44,7 +51,7 @@
           <tbody>
               <tr id="fila-0">
                   <td><input type="text" class="form-control registro-planProduccion" name="PP_codigo_producto[]"></td>
-                  <td><input type="number" class="form-control registro-planProduccion" name="cantProducto_fabricar[]"></td>
+                  <td><input type="number" step=".01" class="form-control registro-planProduccion" name="cantProducto_fabricar[]"></td>
                   <td><input type="text" class="form-control registro-planProduccion" name="unidadMedidaProd_PP[]"></td>
               </tr>
           </tbody>
@@ -65,7 +72,7 @@
           <tbody>
             <tr id="fila-0">
               <td><input type="text" class="form-control registro-planProduccion" name="PP_codigo_MP[]"></td>
-              <td><input type="number" class="form-control registro-planProduccion" name="cantMinMP_requerida[]"></td>
+              <td><input type="number" step=".01" class="form-control registro-planProduccion" name="cantMinMP_requerida[]"></td>
               <td><input type="text" class="form-control registro-planProduccion" name="unidadMedida_MP_PP[]"></td>            
             </tr>
           </tbody>
@@ -89,24 +96,30 @@
         <button type="submit" class="btn btn-primary" id="btn-registrar-planProduccion" style="display: inline-block;">Registrar plan de producción</button>
         <button type="submit" class="btn btn-primary" id="btn-actualizar-planProduccion" style="display: inline-block; margin-left: 40px;">Actualizar plan de producción</button>
         
+        <br><br><br>
+        
         <h3 class="titulo-comun">Buscar plan de producción</h3>
 
         <div class="form-group">
-          <label for="buscar-PlanProduccion">Por favor, introduzca el código del plan de producción que desea buscar:</label>
-          <input type="text" name="buscar_PlanProduccion" class="form-control buscar-planProduccion">
+          <label for="buscar-planProduccion">Por favor, introduzca el código del plan de producción que desea buscar:</label>
+          <input type="text" name="buscar_planProduccion" class="form-control buscar-planProduccion">
         </div>
               
         <button type="submit" class="btn btn-primary" id="btn-buscar-planProduccion">Buscar plan de producción</button>     
           
+        <br><br><br>
+        
         <h3 class="titulo-comun">Eliminar plan de producción</h3>
 
         <div class="form-group">
-          <label for="eliminar-PlanProduccion">Introduzca el código del plan de produccion que desea eliminar del sistema:</label>
-          <input type="text" name="eliminar_PlanProduccion" class="form-control eliminar-planProduccion">
+          <label for="eliminar-planProduccion">Introduzca el código del plan de produccion que desea eliminar del sistema:</label>
+          <input type="text" name="eliminar_planProduccion" class="form-control eliminar-planProduccion">
         </div>
 
         <button type="submit" class="btn btn-primary" id="btn-eliminar-planProduccion">Eliminar plan de producción</button>              
       
+        <br><br><br>
+
       </form>
     </div>
   </div>
