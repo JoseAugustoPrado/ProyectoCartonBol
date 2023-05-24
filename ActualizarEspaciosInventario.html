@@ -30,7 +30,7 @@
     <div class="container my-4"></div>
     <div class="container">
       <form>
-        <h3 class="titulo-comun">Registro de actualización de espacios del inventario</h3>
+        <br><h3 class="titulo-comun">Registro de actualización de espacios del inventario</h3>
     
         <div class="form-group">
           <label for="ID-actualizacionInventario">ID de la actualización del espacio de inventario:</label>
@@ -59,7 +59,7 @@
                 <th class="titulo-tabla">Código de material</th>
                 <th class="titulo-tabla">Cantidad</th>
                 <th class="titulo-tabla">Unidad de medida</th>
-                <th class="titulo-tabla">Fecha de actualización</th>
+                <th class="titulo-tabla">Fecha y hora de actualización</th>
               </tr>
             </thead>
             <tbody>
@@ -67,13 +67,13 @@
                 <td><input type="text" class="form-control registro-actualizacionInventario" name="AI_codigo_material[]"></td>
                 <td><input type="number" step=".01" class="form-control registro-actualizacionInventario" name="cantidad_material_AI[]"></td>
                 <td><input type="text" class="form-control registro-actualizacionInventario" name="unidadMedidaMaterial_AI[]"></td>
-                <td><input type="datetime" class="form-control registro-actualizacionInventario" placeholder="(AAAA-MM-DD HH:mm)" name="fechaActualizacion_Inventario[]"></td>     
+                <td><input type="datetime-local" class="form-control registro-actualizacionInventario" name="fechaActualizacion_Inventario[]"></td>     
               </tr>
             </tbody>
           </table>
   
           <div class="btn-container">
-            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-material-actualizacionInventario', ['AI_codigo_material', 'cantidad_material_AI', 'unidadMedidaMaterial_AI', 'fechaActualizacion_Inventario'], ['registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario'], ['text', 'number', 'text', 'datetime'])">Agregar fila</button>
+            <button type="button" class="btn btn-agregar-fila" style="display: inline-block" onclick="agregarFila('tabla-material-actualizacionInventario', ['AI_codigo_material', 'cantidad_material_AI', 'unidadMedidaMaterial_AI', 'fechaActualizacion_Inventario'], ['registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario', 'registro-actualizacionInventario'], ['text', 'number', 'text', 'datetime-local'])">Agregar fila</button>
             <button type="button" class="btn btn-eliminar-fila" style="display: inline-block; margin-left: 40px;" onclick="eliminarFila('tabla-material-actualizacionInventario')">Eliminar fila</button>
           </div>
 
@@ -85,6 +85,8 @@
         <button type="submit" class="btn btn-primary" id="btn-registrar-actualizacionInventario" style="display: inline-block;">Registrar Transacción</button>
         <button type="submit" class="btn btn-primary" id="btn-actualizar-actualizacionInventario" style="display: inline-block; margin-left: 40px;">Actualizar Transacción</button>
         
+        <br><br><br>
+
         <h3 class="titulo-comun">Buscar actualización de espacio del inventario</h3>
 
         <div class="form-group">
@@ -93,7 +95,9 @@
         </div>
               
         <button type="submit" class="btn btn-primary" id="btn-buscar-actualizacionInventario">Buscar actualización de espacio del inventario</button>     
-          
+        
+        <br><br><br>
+
         <h3 class="titulo-comun">Eliminar actualización de espacio del inventario</h3>
 
         <div class="form-group">
@@ -103,6 +107,7 @@
         
         <button type="submit" class="btn btn-primary" id="btn-eliminar-actualizacionInventario">Eliminar actualización de espacio del inventario</button>              
       
+        <br><br><br>
       </form>
     </div>
   </div>

@@ -30,7 +30,7 @@
     <div class="container my-4"></div>
     <div class="container">
       <form>
-        <h3 class="titulo-comun">Registro o actualización de los mantenimientos realizados en las máquinas</h3>
+        <br><h3 class="titulo-comun">Registro o actualización de los mantenimientos realizados en las máquinas</h3>
     
         <div class="form-group">
           <label for="codigo-mantenimiento">Código del mantenimiento:</label>
@@ -38,8 +38,8 @@
         </div>
     
         <div class="form-group">
-          <label for="fecha-mantenimiento">Fecha del mantenimiento:</label>
-          <input type="date" name="fecha_mantenimiento" class="form-control registro-mantenimiento">
+          <label for="fecha-mantenimiento">Fecha y hora del mantenimiento:</label>
+          <input type="datetime-local" name="fecha_mantenimiento" class="form-control registro-mantenimiento">
         </div>
 
         <div class="form-group">
@@ -60,6 +60,8 @@
         <button type="submit" class="btn btn-primary" id="btn-registrar-mantenimiento" style="display: inline-block;">Registrar mantenimiento</button>
         <button type="submit" class="btn btn-primary" id="btn-actualizar-mantenimiento" style="display: inline-block; margin-left: 40px;">Actualizar mantenimiento</button>
         
+        <br><br><br>
+
         <h3 class="titulo-comun">Buscar mantenimiento realizado</h3>
 
         <div class="form-group">
@@ -68,7 +70,9 @@
         </div>
               
         <button type="submit" class="btn btn-primary" id="btn-buscar-mantenimiento">Buscar mantenimiento</button>     
-          
+        
+        <br><br><br>
+
         <h3 class="titulo-comun">Eliminar mantenimiento realizado</h3>
 
         <div class="form-group">
@@ -77,7 +81,9 @@
         </div>
         
         <button type="submit" class="btn btn-primary" id="btn-eliminar-mantenimiento">Eliminar mantenimiento</button>              
-      
+        
+        <br><br><br>
+
       </form>
     </div>
   </div>
